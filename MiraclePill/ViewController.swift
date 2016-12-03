@@ -12,10 +12,12 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     //stany
     @IBOutlet weak var statePicker: UIPickerView!
+    @IBOutlet weak var selectStateButton: UIButton!
+    
     
     
     //state array 
-    let states = ["Alaska", "Arkansas","Oio"]
+    let states = ["Alaska", "Arkansas","Ohio"]
     
     
     override func viewDidLoad() {
@@ -41,6 +43,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return states[row]
+    }
+    func pickerView(_ pickerVier: UIPickerView, didSelectRow row :  Int, inComponent component : Int) {
+        selectStateButton.setTitle(states[row], for: UIControlState.normal)
+        statePicker.isHidden = true
     }
 }
 

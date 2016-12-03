@@ -165,6 +165,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="selectStateButton" destination="xt6-dB-eAW" id="avW-Tm-N8g"/>
                         <outlet property="statePicker" destination="GeH-xf-sH9" id="0QS-df-Y2e"/>
                     </connections>
                 </viewController>
